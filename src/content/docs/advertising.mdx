@@ -1,0 +1,69 @@
+---
+title: Advertising
+description: Concepts around advertising your session, connectivity, and NAT type considerations.
+---
+
+> **Note:** Make sure to go to the social club in GTA (usually accessed when pressing Home on your keyboard, or by going to pause menu then capslock), settings, network settings then check your NAT type.
+
+## Getting Started
+
+When you have BattlEye disabled you can't be in public sessions where you're not the host, as you will be kicked out after a few minutes, too many kicks may cause a BattlEye soft ban, not allowing you to play for 12-24 hrs or more.
+
+- Navigate to session in the menu then open up a "New Public Session"
+- Alternatively, go to "Find Public Session" and kick everyone out till you become the host
+- Select a region of choice and press "Advertise Session"
+
+
+## Network Address Translation (NAT)
+
+NAT is a service that converts private IP addresses to public ones to allow them to use the internet and cloud, we have 3 types:
+
+- NAT Type: "Strict" means that your matchmaking will have delays and it may impact hosting and lobby connections, it allows you to connect to players who have an Open NAT type
+- NAT Type: "Moderate" lets you connect with Open and Moderate peers, but may have limited interactions with Strict users. It's fairly flexible and can work nicely for advertising
+- NAT Type: "Open" lets you connect to anyone regardless of their NAT type. It's the easiest to host and join.
+
+## Improving NAT type (Native)
+
+Here's a way to natively improve your NAT type:
+
+- Go to your router's settings and go to either Port Forwarding or Port Mapping
+- Refer to the list of ports below depending on your platform of choice (also applies to console users, tho this menu will never be console available)
+- If you don't know how to access your router settings, it will probably have a video or web tutorial on how to do so for your ISP and Router
+
+**Port List:**
+**PC (Rockstar launcher):**
+
+- UDP: 6672, 61455–61458
+
+**PC (Steam version, includes Steam backend):**
+
+- TCP: 27015, 27036
+
+- UDP: 6672, 27015, 27031–27036, 61455–61458
+
+**PlayStation (PS3/PS4/PS5):**
+
+- TCP: 3478–3480 (plus 5223, 8080 on PS3)
+
+- UDP: 3074, 3478–3479, 6672, 61455–61458
+
+**Xbox (360/One/Series):**
+
+- TCP: 3074
+
+- UDP: 88, 500, 3074, 3544, 4500, 6672, 61455–61458
+
+## Video Explanation
+
+Below is a fairly detailed video explanation on how to advertise sessions.
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER"
+    title="Cherax Advertising & NAT types"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
