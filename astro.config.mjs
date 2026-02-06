@@ -14,6 +14,7 @@ export default defineConfig({
 					label: 'Cherax Wiki',
 					items: [
 						{ label: 'Getting Started', slug: 'getting-started' },
+						{ label: 'Getting Full Access To Channels', slug: 'getting-access-to-channels' },
 						{ label: 'Outfits', slug: 'outfits' },
 						{ label: 'Modded Vehicles', slug: 'vehicles' },
 						{ label: 'Menu Themes', slug: 'themes'},
