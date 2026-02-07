@@ -9,6 +9,9 @@ export default defineConfig({
 			title: 'Cherax Wiki',
 			social: [],
 			customCss: ['./src/assets/video-embed.css'],
+			components: {
+				Head: './src/components/Head.astro',
+			},
 			sidebar: [
 				{
 					label: 'Cherax Wiki',
