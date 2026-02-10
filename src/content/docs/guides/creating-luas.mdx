@@ -1,0 +1,62 @@
+---
+title: Writing Lua Scripts
+description: A basic introduction to writing Lua scripts for Cherax
+---
+
+> **Note:** This guide only demonstrates an example for the Click GUI, not List GUI, but the basics are the same
+
+## Why write your own?
+
+You may want to write your own Lua script for a variety of reasons, such as:
+
+- Learning Lua hands-on
+- Adding trolling options that aren't available anywhere else
+- Creating your own fun
+
+## What do we need?
+
+Before we get started, you will need the following:
+
+- A suitable text editor or IDE, for example [Visual Studio Code](https://code.visualstudio.com/)
+- Some experience with Lua scripting
+- Knowledge of the [Cherax API](https://docs.asuna.cat)
+- And the most important, **patience**
+
+## Getting started
+
+Once you have everything you need, make sure you have file extensions turned on, and you can create a new Lua file in Documents/Cherax/Lua, and call it whatever you like, just don't forget the .lua at the end.
+
+Now that you have your Lua file, it's time to do make a basic script, we will be making a simple button which just gives us a toast when we press it.
+
+First of all, let's make our tab in Lua Content, we can do this by using the ImGui API provided by Cherax, we can start off by making a simple render function:
+
+```lua
+local function render()
+    if ClickGUI.BeginCustomChildWindow("Example") then
+        ClickGUI.EndCustomChildWindow()
+    end
+end
+```
+
+Then we add it to our Lua Content tab with `ClickGUI.AddTab("Example", render)`
+
+That's it for now for rendering, but now we need to add our feature, we can add it like so:
+
+```lua
+FeatureMgr.AddFeature(Utils.Joaat("ExampleButton"), "Click Me", eFeatureType.Button, "", function(feat)
+    GUI.AddToast("Example Script", "You clicked the button!", 3000)
+end)
+```
+
+Alright, we have our first feature, now we can render it by modifying the render function we made previously:
+
+```lua
+local function render()
+    if ClickGUI.BeginCustomChildWindow("Example") then
+        ClickGUI.RenderFeature(Utils.Joaat("ExampleButton"))
+        ClickGUI.EndCustomChildWindow()
+    end
+end
+```
+
+That's all there is to it, now if you run the script via the Lua Editor tab on Cherax, then go to the Lua Content tab, you will see a new tab called Example, and on it, you will see our button, which when you click, will show you a toast.
