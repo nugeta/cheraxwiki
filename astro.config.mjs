@@ -26,6 +26,7 @@ export default defineConfig({
 						{ label: 'Luas', slug: 'luas' },
 						{ label: 'Advertising', slug: 'advertising' },
 						{ label: 'Recoveries', slug: 'recoveries' },
+						{ label: 'Prime', slug: 'prime'},
 						{ label: 'Donations', slug: 'donations' },
 						{ label: 'Contributions', slug: 'contributions' },
 					],
