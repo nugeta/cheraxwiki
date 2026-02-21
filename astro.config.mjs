@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Cherax Wiki',
+			favicon: '/logo.png',
 			social: [],
 			customCss: ['./src/assets/video-embed.css'],
 			components: {
