@@ -23,23 +23,23 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Purchasing',
-					autogenerate: { directory: 'purchasing' },
+					items: [{ autogenerate: { directory: 'purchasing' } }],
 				},
 				{
 					label: 'Recoveries',
-					autogenerate: { directory: 'recovery' }
+					items: [{ autogenerate: { directory: 'recovery' } }],
 				},
 				{
 					label: 'Customization',
-					autogenerate: { directory: 'customization' }
+					items: [{ autogenerate: { directory: 'customization' } }],
 				},
 				{
 					label: 'Guides',
-					autogenerate: { directory: 'guides' }
+					items: [{ autogenerate: { directory: 'guides' } }],
 				},
 				{
 					label: 'Contributing',
-					autogenerate: { directory: 'contributing' }
+					items: [{ autogenerate: { directory: 'contributing' } }],
 				}
 			],
 		}),
