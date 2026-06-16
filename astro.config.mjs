@@ -12,7 +12,10 @@ export default defineConfig({
 			title: 'Cherax Wiki',
 			favicon: '/logo.png',
 			social: [],
-			customCss: ['./src/assets/video-embed.css'],
+			customCss: [
+				'./src/styles/custom.css',
+				'./src/assets/video-embed.css',
+			],
 			components: {
 				Head: './src/components/Head.astro',
 			},

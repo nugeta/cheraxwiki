@@ -1,36 +1,57 @@
 ---
-title: Landing Page
-description: High-level overview of the Cherax GTA mod menu and its documentation.
+title: Cherax Wiki
+description: A fan-made collection of tutorials and guides for the Cherax GTA mod menu — purchasing, customization, Luas, recoveries and more.
 template: splash
 hero:
-  tagline: Fan-made collection of tutorials for the mod menu Cherax.
+  tagline: The unofficial, community-driven guide to the Cherax GTA mod menu.
   image:
     file: ../../assets/cherax-logo.png
   actions:
     - text: Getting Started
       link: /purchasing/getting-started/
       icon: right-arrow
-    - text: Luas
+    - text: Browse Luas
       link: /customization/luas/
       icon: open-book
       variant: minimal
 ---
 
-> **Note:** This site is not official, these tutorials are written and borrowed by gustigost from the Cherax Discord Server.
-In the case that you would like to help contribute in any way to the site, like for example adding your own tutorials or donating to help upkeep the site, feel free to reach out to me.
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## Table of Contents
+:::note[Unofficial wiki]
+This site is **not** official. These tutorials are written and borrowed by gustigost from the Cherax Discord Server. If you'd like to contribute your own tutorials, or donate to help with upkeep, feel free to reach out.
+:::
 
-- **Purchasing Cherax**: Explains how to buy from resellers, how to save money and similar when purchasing Cherax.
-- **Getting Started**: A generic rundown of the menu, how to set it up, and how to prevent errors when running it.
-- **Getting Full Access to Channels**: Explains how to get unrestricted chat access in the Cherax discord and also get all the relevant channels.
-- **Outfits**: Explains how to download outfits whilst also showing how to load them into the game and keep them.
-- **Modded Vehicles**: Explains how to download modded vehicles whilst also showing how to load them into the game and keep them.
-- **Menu Themes**: Explains how to download themes whilst also showing how to load them into the game and keep them.
-- **DLCs**: Explains how to use DLC vehicles and peds in game to have a little fun.
-- **Luas**: An overview of Lua Scripts like Silent Night, Codax, Bunnyscript, Jinxscript and many others. Also shows how to run and configure them.
-- **Advertising**: How to advertise a session to get players in, fixing some common issues and using port forwarding or NAT type spoofing for a better advertising experience.
-- **Recoveries**: An overview of most, if not all the recovery features, as well as how to stay safe whilst doing them.
-- **Prime**: Explains everything you need to know about Cherax Prime.
-- **Donations**: Shows information on how you can help fund the upkeeping of the wiki.
-- **Contributions**: Shows information on how you can add or request content to be added/removed from the wiki.
+## Getting Started
+
+<CardGrid>
+	<LinkCard title="Purchasing Cherax" href="/purchasing/purchasing-cherax/" description="How to buy from resellers, save money, and avoid common pitfalls." />
+	<LinkCard title="Getting Started" href="/purchasing/getting-started/" description="A rundown of the menu, how to set it up, and how to prevent errors." />
+	<LinkCard title="Full Channel Access" href="/purchasing/getting-access-to-channels/" description="Unlock unrestricted chat and all relevant channels in the Cherax Discord." />
+	<LinkCard title="Cherax Prime" href="/purchasing/prime/" description="Everything you need to know about Cherax Prime." />
+</CardGrid>
+
+## Customization
+
+<CardGrid>
+	<LinkCard title="Outfits" href="/customization/outfits/" description="Download outfits, load them in-game, and keep them saved." />
+	<LinkCard title="Modded Vehicles" href="/customization/vehicles/" description="Download modded vehicles, load them in-game, and keep them." />
+	<LinkCard title="Menu Themes" href="/customization/themes/" description="Download themes, apply them, and keep them across sessions." />
+	<LinkCard title="DLCs" href="/customization/dlcs/" description="Use DLC vehicles and peds in-game for some extra fun." />
+	<LinkCard title="Luas" href="/customization/luas/" description="Silent Night, Codax, Bunnyscript, Jinxscript and more — how to run and configure them." />
+</CardGrid>
+
+## Playing & Recovery
+
+<CardGrid>
+	<LinkCard title="Advertising" href="/purchasing/advertising/" description="Get players into your session, fix common issues, and use port forwarding or NAT spoofing." />
+	<LinkCard title="Recoveries" href="/recovery/recoveries/" description="An overview of recovery features and how to stay safe while doing them." />
+</CardGrid>
+
+## Guides & Community
+
+<CardGrid>
+	<LinkCard title="Writing Lua Scripts" href="/guides/creating-luas/" description="Learn how to build your own Cherax Lua scripts from scratch." />
+	<LinkCard title="Donations" href="/contributing/donations/" description="Help fund the continued upkeep of the wiki." />
+	<LinkCard title="Contributions" href="/contributing/contributions/" description="Request content, or add your own to the wiki." />
+</CardGrid>

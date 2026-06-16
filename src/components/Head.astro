@@ -5,14 +5,40 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 const { head } = Astro.locals.starlightRoute;
 const { entry } = Astro.locals.starlightRoute;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('/logo.png', Astro.site);
+
+const siteName = 'Cherax Wiki';
+const pageTitle = entry.data.title
+	? `${entry.data.title} | ${siteName}`
+	: siteName;
+const pageDescription =
+	entry.data.description ??
+	'Fan-made tutorials and guides for the Cherax GTA mod menu.';
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+
+{/* Fonts: Chakra Petch (display) + Outfit (body) */}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+/>
+
 <link rel="canonical" href={canonicalURL} />
+<meta name="theme-color" content="#7c4dff" />
+
+{/* Open Graph (no image — avoids the logo embed preview) */}
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:type" content="website" />
-<meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="Cherax Wiki" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+
+{/* Twitter — text-only summary, no image */}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+
 <Analytics />
 <SpeedInsights />
