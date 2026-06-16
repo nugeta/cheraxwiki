@@ -5,21 +5,6 @@
    matches the Cherax mod menu without sacrificing readability.
    ============================================================ */
 
-/* ----------  Typography  ---------- */
-:root {
-	/* Outfit = clean geometric body; Chakra Petch = angular HUD display */
-	--sl-font: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--cw-font-display: 'Chakra Petch', var(--sl-font);
-}
-
-/* Headings & key UI get the display font */
-:root :is(h1, h2, h3, h4, h5, h6),
-.site-title,
-.sl-markdown-content :is(h1, h2, h3, h4) {
-	font-family: var(--cw-font-display);
-	letter-spacing: 0.01em;
-}
-
 /* ----------  Dark theme (default)  ---------- */
 :root {
 	/* Accent — Cherax violet */
@@ -103,16 +88,6 @@
 .hero img {
 	filter: drop-shadow(0 0 38px rgba(var(--cw-glow), 0.45))
 		drop-shadow(0 0 8px rgba(var(--cw-glow), 0.35));
-	animation: cw-float 6s ease-in-out infinite;
-}
-
-@keyframes cw-float {
-	0%, 100% { transform: translateY(0); }
-	50% { transform: translateY(-10px); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.hero img { animation: none; }
 }
 
 /* ----------  Primary CTA buttons  ---------- */
