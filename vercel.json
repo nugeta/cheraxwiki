@@ -1,6 +1,15 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/Startup.lua",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"Startup.lua\"" }
+      ]
+    }
+  ],
   "redirects": [
     { "source": "/getting-started",             "destination": "/purchasing/getting-started/",           "permanent": true },
     { "source": "/purchasing-cherax",            "destination": "/purchasing/purchasing-cherax/",         "permanent": true },
