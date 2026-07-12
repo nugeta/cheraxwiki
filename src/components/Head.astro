@@ -13,6 +13,39 @@ const pageTitle = entry.data.title
 const pageDescription =
 	entry.data.description ??
 	'Fan-made tutorials and guides for the Cherax GTA mod menu.';
+
+const isHome = Astro.url.pathname === '/';
+
+const websiteSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: siteName,
+	url: Astro.site?.toString(),
+	description:
+		'A fan-made collection of tutorials and guides for the Cherax GTA mod menu - purchasing, customization, Luas, recoveries and more.',
+	inLanguage: 'en',
+};
+
+const organizationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: siteName,
+	url: Astro.site?.toString(),
+	logo: new URL('/logo.png', Astro.site).toString(),
+};
+
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'TechArticle',
+	headline: entry.data.title,
+	description: pageDescription,
+	url: canonicalURL.toString(),
+	isPartOf: {
+		'@type': 'WebSite',
+		name: siteName,
+		url: Astro.site?.toString(),
+	},
+};
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
@@ -31,6 +64,15 @@ const pageDescription =
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={pageDescription} />
+
+{isHome ? (
+	<>
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+	</>
+) : (
+	<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+)}
 
 <Analytics />
 <SpeedInsights />
