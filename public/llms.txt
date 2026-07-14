@@ -1,32 +1,25 @@
 # Cherax Wiki
 
-> A fan-made, community-driven collection of tutorials and guides for the Cherax GTA mod menu. This site is unofficial and not affiliated with the Cherax developers.
+> A fan made collection of guides for the Cherax Mod Menu for Grand Theft Auto V Online.
 
-Cherax Wiki documents how to purchase, set up, customize, and troubleshoot the Cherax mod menu for GTA Online, including Lua scripting, recoveries, and reseller safety.
+Website: https://cherax.wiki
 
-## Purchasing
-- [Purchasing Cherax](https://cherax.wiki/purchasing/purchasing-cherax/): How to buy from resellers, save money, and avoid common pitfalls.
-- [Reselling Cherax](https://cherax.wiki/purchasing/reselling-cherax/): Guidance on reselling Cherax safely and legitimately.
-- [Getting Started](https://cherax.wiki/purchasing/getting-started/): Setting up the menu and preventing common errors.
-- [Full Channel Access](https://cherax.wiki/purchasing/getting-access-to-channels/): Unlocking full chat access in the Cherax Discord.
-- [Cherax Prime](https://cherax.wiki/purchasing/prime/): Overview of the Cherax Prime tier.
-- [Advertising](https://cherax.wiki/purchasing/advertising/): Getting players into your session, port forwarding, and NAT spoofing.
-
-## Customization
-- [Outfits](https://cherax.wiki/customization/outfits/): Downloading and loading custom outfits.
-- [Modded Vehicles](https://cherax.wiki/customization/vehicles/): Downloading and loading modded vehicles.
-- [Menu Themes](https://cherax.wiki/customization/themes/): Applying and persisting menu themes.
-- [DLCs](https://cherax.wiki/customization/dlcs/): Using DLC vehicles and peds in-game.
-- [Luas](https://cherax.wiki/customization/luas/): Running and configuring community Lua scripts (Silent Night, Codax, Bunnyscript, Jinxscript).
-
-## Guides
-- [Writing Lua Scripts](https://cherax.wiki/guides/creating-luas/): Introduction to writing Cherax Lua scripts.
-- [Using Cherax on Linux](https://cherax.wiki/guides/using-cherax-on-linux/): Running Cherax under Linux/Proton.
-
-## Recovery
-- [Recoveries](https://cherax.wiki/recovery/recoveries/): Overview of recovery features and staying safe.
-- [Recovery Services](https://cherax.wiki/recovery/recovery-services/): Notes on third-party recovery services.
-
-## Contributing
-- [Contributions](https://cherax.wiki/contributing/contributions/): How to request or add content to the wiki.
-- [Donations](https://cherax.wiki/contributing/donations/): Supporting the upkeep of the wiki.
+## Key pages
+- [Purchasing Cherax](https://cherax.wiki/purchasing/purchasing-cherax/)
+- [Prime](https://cherax.wiki/purchasing/prime/)
+- [Getting Full Access to Channels](https://cherax.wiki/purchasing/getting-access-to-channels/)
+- [Getting Started](https://cherax.wiki/purchasing/getting-started/)
+- [Playing Online](https://cherax.wiki/purchasing/advertising/)
+- [Reselling Cherax](https://cherax.wiki/purchasing/reselling-cherax/)
+- [Recovery Information](https://cherax.wiki/recovery/recoveries/)
+- [Recovery Services](https://cherax.wiki/recovery/recovery-services/)
+- [DLCs (Vehicles and Peds)](https://cherax.wiki/customization/dlcs/)
+- [Getting Luas](https://cherax.wiki/customization/luas/)
+- [Outfits](https://cherax.wiki/customization/outfits/)
+- [Themes](https://cherax.wiki/customization/themes/)
+- [Modded Vehicles](https://cherax.wiki/customization/vehicles/)
+- [Writing Lua Scripts](https://cherax.wiki/guides/creating-luas/)
+- [Using Cherax on Linux](https://cherax.wiki/guides/using-cherax-on-linux/)
+- [Wiki Contributions](https://cherax.wiki/contributing/contributions/)
+- [Donations](https://cherax.wiki/contributing/donations/)
+- [Wall of GOATs](https://cherax.wiki/contributing/wallofgoats/)
