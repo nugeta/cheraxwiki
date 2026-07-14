@@ -11,20 +11,20 @@
     }
   ],
   "redirects": [
-    { "source": "/getting-started/?",             "destination": "/purchasing/getting-started/",           "permanent": true },
-    { "source": "/purchasing-cherax/?",            "destination": "/purchasing/purchasing-cherax/",         "permanent": true },
-    { "source": "/getting-access-to-channels/?",  "destination": "/purchasing/getting-access-to-channels/","permanent": true },
-    { "source": "/prime/?",                        "destination": "/purchasing/prime/",                    "permanent": true },
-    { "source": "/advertising/?",                  "destination": "/purchasing/advertising/",              "permanent": true },
-    { "source": "/recoveries/?",                   "destination": "/recovery/recoveries/",                 "permanent": true },
-    { "source": "/outfits/?",                      "destination": "/customization/outfits/",               "permanent": true },
-    { "source": "/vehicles/?",                     "destination": "/customization/vehicles/",              "permanent": true },
-    { "source": "/themes/?",                       "destination": "/customization/themes/",                "permanent": true },
-    { "source": "/dlcs/?",                         "destination": "/customization/dlcs/",                  "permanent": true },
-    { "source": "/luas/?",                         "destination": "/customization/luas/",                  "permanent": true },
-    { "source": "/donations/?",                    "destination": "/contributing/donations/",              "permanent": true },
-    { "source": "/contributions/?",                "destination": "/contributing/contributions/",          "permanent": true },
-    { "source": "/guides/example/?",               "destination": "/",                                    "permanent": true },
-    { "source": "/reference/example/?",            "destination": "/",                                    "permanent": true }
+    { "source": "/getting-started",             "destination": "/purchasing/getting-started/",           "permanent": true },
+    { "source": "/purchasing-cherax",            "destination": "/purchasing/purchasing-cherax/",         "permanent": true },
+    { "source": "/getting-access-to-channels",  "destination": "/purchasing/getting-access-to-channels/","permanent": true },
+    { "source": "/prime",                        "destination": "/purchasing/prime/",                    "permanent": true },
+    { "source": "/advertising",                  "destination": "/purchasing/advertising/",              "permanent": true },
+    { "source": "/recoveries",                   "destination": "/recovery/recoveries/",                 "permanent": true },
+    { "source": "/outfits",                      "destination": "/customization/outfits/",               "permanent": true },
+    { "source": "/vehicles",                     "destination": "/customization/vehicles/",              "permanent": true },
+    { "source": "/themes",                       "destination": "/customization/themes/",                "permanent": true },
+    { "source": "/dlcs",                         "destination": "/customization/dlcs/",                  "permanent": true },
+    { "source": "/luas",                         "destination": "/customization/luas/",                  "permanent": true },
+    { "source": "/donations",                    "destination": "/contributing/donations/",              "permanent": true },
+    { "source": "/contributions",                "destination": "/contributing/contributions/",          "permanent": true },
+    { "source": "/guides/example",               "destination": "/",                                    "permanent": true },
+    { "source": "/reference/example",            "destination": "/",                                    "permanent": true }
   ]
 }
