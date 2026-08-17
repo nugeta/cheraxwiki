@@ -8,16 +8,16 @@ hero:
     file: ../../assets/cherax-logo.png
     alt: Cherax Wiki logo
   actions:
+    - text: Purchasing Cherax
+      link: /purchasing/purchasing-cherax/
+      icon: right-arrow
     - text: Getting Started
       link: /purchasing/getting-started/
-      icon: right-arrow
-    - text: Browse Luas
-      link: /customization/luas/
       icon: open-book
       variant: minimal
 ---
 
-import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import PageFinder from '../../components/PageFinder.astro';
 
 :::note[Unofficial wiki]
 This site is **not** official. These tutorials are written and borrowed by gustigost from the Cherax Discord Server. If you'd like to contribute your own tutorials, or donate to help with upkeep, feel free to reach out.
@@ -25,39 +25,7 @@ This site is **not** official. These tutorials are written and borrowed by gusti
 For the official menu, purchases, and product overview, visit the [official Cherax website](https://cherax.menu). Developers writing Lua scripts should also check the [official Cherax API documentation](https://docs.asuna.cat).
 :::
 
-## Getting Started
-
-<CardGrid>
-	<LinkCard title="Purchasing Cherax" href="/purchasing/purchasing-cherax/" description="How to buy from resellers, save money, and avoid common pitfalls." />
-	<LinkCard title="Getting Started" href="/purchasing/getting-started/" description="A rundown of the menu, how to set it up, and how to prevent errors." />
-	<LinkCard title="Full Channel Access" href="/purchasing/getting-access-to-channels/" description="Unlock unrestricted chat and all relevant channels in the Cherax Discord." />
-	<LinkCard title="Cherax Prime" href="/purchasing/prime/" description="Everything you need to know about Cherax Prime." />
-</CardGrid>
-
-## Customization
-
-<CardGrid>
-	<LinkCard title="Outfits" href="/customization/outfits/" description="Download outfits, load them in-game, and keep them saved." />
-	<LinkCard title="Modded Vehicles" href="/customization/vehicles/" description="Download modded vehicles, load them in-game, and keep them." />
-	<LinkCard title="Menu Themes" href="/customization/themes/" description="Download themes, apply them, and keep them across sessions." />
-	<LinkCard title="DLCs" href="/customization/dlcs/" description="Use DLC vehicles and peds in-game for some extra fun." />
-	<LinkCard title="Luas" href="/customization/luas/" description="Silent Night, Codax, Bunnyscript, Jinxscript and more - how to run and configure them." />
-</CardGrid>
-
-## Playing & Recovery
-
-<CardGrid>
-	<LinkCard title="Advertising" href="/purchasing/advertising/" description="Get players into your session, fix common issues, and use port forwarding or NAT spoofing." />
-	<LinkCard title="Recoveries" href="/recovery/recoveries/" description="An overview of recovery features and how to stay safe while doing them." />
-</CardGrid>
-
-## Guides & Community
-
-<CardGrid>
-	<LinkCard title="Writing Lua Scripts" href="/guides/creating-luas/" description="Learn how to build your own Cherax Lua scripts from scratch." />
-	<LinkCard title="Donations" href="/contributing/donations/" description="Help fund the continued upkeep of the wiki." />
-	<LinkCard title="Contributions" href="/contributing/contributions/" description="Request content, or add your own to the wiki." />
-</CardGrid>
+<PageFinder />
 
 ## Frequently Asked Questions
 

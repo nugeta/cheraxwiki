@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+interface CategoryConfig {
+	title: string;
+	order: number;
+}
+
+const CATEGORY_MAP: Record<string, CategoryConfig> = {
+	purchasing: { title: 'Getting Started & Purchasing', order: 1 },
+	customization: { title: 'Customization', order: 2 },
+	recovery: { title: 'Playing & Recovery', order: 3 },
+	guides: { title: 'Guides & Tutorials', order: 4 },
+	contributing: { title: 'Contributing & Community', order: 5 },
+};
+
+const allDocs = await getCollection('docs');
+
+// Filter out home page index and any draft docs
+const docs = allDocs.filter((doc) => doc.id !== 'index' && !doc.data.draft);
+
+// Group docs by top-level directory in entry id (e.g. 'purchasing/getting-started' -> 'purchasing')
+const groups: Record<string, typeof docs> = {};
+
+for (const doc of docs) {
+	const parts = doc.id.split('/');
+	const categoryKey = parts.length > 1 ? parts[0] : 'other';
+	if (!groups[categoryKey]) {
+		groups[categoryKey] = [];
+	}
+	groups[categoryKey].push(doc);
+}
+
+function formatCategoryTitle(key: string): string {
+	if (CATEGORY_MAP[key]) return CATEGORY_MAP[key].title;
+	return key
+		.split(/[-_]/)
+		.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+		.join(' ');
+}
+
+const sortedCategories = Object.keys(groups).sort((a, b) => {
+	const orderA = CATEGORY_MAP[a]?.order ?? 99;
+	const orderB = CATEGORY_MAP[b]?.order ?? 99;
+	if (orderA !== orderB) return orderA - orderB;
+	return a.localeCompare(b);
+});
+
+// Sort items within each category group: by sidebar.order if set, otherwise by title
+for (const key of Object.keys(groups)) {
+	groups[key].sort((a, b) => {
+		const orderA = a.data.sidebar?.order ?? 999;
+		const orderB = b.data.sidebar?.order ?? 999;
+		if (orderA !== orderB) return orderA - orderB;
+		return a.data.title.localeCompare(b.data.title);
+	});
+}
+---
+
+{
+	sortedCategories.map((catKey) => (
+		<section class="page-finder-section">
+			<h2>{formatCategoryTitle(catKey)}</h2>
+			<CardGrid>
+				{groups[catKey].map((doc) => (
+					<LinkCard
+						title={doc.data.title}
+						href={`/${doc.id}/`}
+						description={doc.data.description || ''}
+					/>
+				))}
+			</CardGrid>
+		</section>
+	))
+}
